@@ -20,6 +20,8 @@
 #define LEF 3
 #define TRI 4
 
+#define U_MOUSE_SCROLL_MAX 3
+
 / {
     behaviors {
         //ht: hold_tap {
