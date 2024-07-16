@@ -20,7 +20,7 @@
 #define LEF 3
 #define TRI 4
 
-#define U_MOUSE_SCROLL_MAX 3
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 2
 
 / {
     behaviors {
