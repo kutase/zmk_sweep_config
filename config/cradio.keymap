@@ -32,16 +32,16 @@
        //     global-quick-tap;
        //     bindings = <&kp>, <&kp>;
        // };
-        hms: hold_tap {
-            label = "hold_tap_mouse_scroll";
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&kp>, <&msc>;
-        };
+       // hms: hold_tap {
+       //     label = "hold_tap_mouse_scroll";
+       //     compatible = "zmk,behavior-hold-tap";
+       //     #binding-cells = <2>;
+       //     flavor = "tap-preferred";
+       //     tapping-term-ms = <220>;
+       //     quick-tap-ms = <150>;
+       //     global-quick-tap;
+        //    bindings = <&kp>, <&msc>;
+        //};
     };
 
     conditional_layers {
@@ -92,13 +92,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ 1        │  2       │  3       │  4       │  5       │   │ 6        │ 7        │ 8        │ 9        │   0      │
-            &kp N1    &kp N2     &hms MOVE_UP N3    &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9      &kp N0
+            &kp N1    &kp N2       &kp N3    &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9      &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│MouseLeft │ MouseUp  │MouseDown │MouseRight│          |   | LMClick  │ LEFT     │ UP       │ DOWN     │ RIGHT    │
 &mmv MOVE_LEFT &mmv MOVE_UP &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans      &mkp LCLK  &kp LARW   &kp UARW   &kp DARW   &kp RARW 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│   DELETE │ CapsLock │          │          │          │   │ RMCLick  │ HOME     │ PAGE DN  │ PAGE UP  │ END      │
-            &kp DEL    &kp CAPS &msc MOVE_DOWN  &trans      &trans     &mkp RCLK  &kp HOME   &kp PG_DN  &kp PG_UP  &kp END 
+         &kp DEL      &kp CAPS  &msc MOVE_UP  &msc MOVE_DOWN  &trans   &mkp RCLK  &kp HOME   &kp PG_DN  &kp PG_UP  &kp END 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp ESC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
