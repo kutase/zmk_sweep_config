@@ -96,11 +96,11 @@
         //│ 1        │  2       │  3       │  4       │  5       │   │ 6        │ 7        │ 8        │ 9        │   0      │
             &kp N1    &kp N2       &kp N3    &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9      &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│MouseLeft │ MouseUp  │MouseDown │MouseRight│          |   | LMClick  │ LEFT     │ UP       │ DOWN     │ RIGHT    │
-&mmv MOVE_LEFT &mmv MOVE_UP &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans      &mkp LCLK  &kp LARW   &kp UARW   &kp DARW   &kp RARW 
+        //│CAPSLOCK  │          │MouseUp   │LMCLick   │ RMClick  |   | PAGE UP  │          │ UP       │   HOME   │   END    │
+            &kp CAPS   &trans   &mmv MOVE_UP &mkp LCLK  &mkp RCLK      &kp PG_UP   &trans   &kp UARW   &kp HOME   &kp END
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│   DELETE │ CapsLock │          │          │          │   │ RMCLick  │ HOME     │ PAGE DN  │ PAGE UP  │ END      │
-         &kp DEL      &kp CAPS  &msc MOVE_UP  &msc MOVE_DOWN  &trans   &mkp RCLK  &kp HOME   &kp PG_DN  &kp PG_UP  &kp END 
+        //│          │          │          │          │          │   │ PAGE DN  │   LEFT   │  DOWN    │  RIGHT   │          │
+           &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &kp PG_DN  &kp LARW   &kp DARW   &kp RARW    &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp ESC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
