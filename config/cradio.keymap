@@ -20,8 +20,6 @@
 #define LEF 3
 #define TRI 4
 
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 2
-
 / {
     behaviors {
         //ht: hold_tap {
@@ -96,11 +94,11 @@
         //│ 1        │  2       │  3       │  4       │  5       │   │ 6        │ 7        │ 8        │ 9        │   0      │
             &kp N1    &kp N2       &kp N3    &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9      &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│CAPSLOCK  │          │MouseUp   │LMCLick   │ RMClick  |   | PAGE UP  │          │ UP       │   HOME   │   END    │
-            &kp CAPS   &trans   &mmv MOVE_UP &mkp LCLK  &mkp RCLK      &kp PG_UP   &trans   &kp UARW   &kp HOME   &kp END
+        //│CAPSLOCK  │          │MouseUp   │LMCLick   │ RMClick  |   |          │          │ UP       │   HOME   │   END    │
+            &kp CAPS   &trans   &mmv MOVE_UP &mkp LCLK  &mkp RCLK      &msc SCRL_Y(3)   &trans   &kp UARW   &kp HOME   &kp END
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │ PAGE DN  │   LEFT   │  DOWN    │  RIGHT   │          │
-           &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &kp PG_DN  &kp LARW   &kp DARW   &kp RARW    &trans
+        //│          │          │          │          │          │   │          │   LEFT   │  DOWN    │  RIGHT   │          │
+           &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &msc SCRL_Y(-3)  &kp LARW   &kp DARW   &kp RARW    &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp ESC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
