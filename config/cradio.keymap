@@ -18,6 +18,7 @@
 #define RIG 2
 #define LEF 3
 #define TRI 4
+#define RIG_MOUSE 5
 
 / {
     behaviors {
@@ -97,7 +98,7 @@
             &kp CAPS   &trans   &mmv MOVE_UP &mkp LCLK  &mkp RCLK     &msc MOVE_Y(30) &trans   &kp UARW   &kp HOME   &kp END
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │   LEFT   │  DOWN    │  RIGHT   │          │
-        &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &msc MOVE_Y(-30)  &kp LARW  &kp DARW  &kp RARW  &trans
+        &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &msc MOVE_Y(-30)  &kp LARW  &kp DARW  &kp RARW  &mo RIG_MOUSE
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp ESC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -135,6 +136,23 @@
         //╰──────────┴──────────┴──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┴───────────┴──────────╯
                                                 &trans     &trans         &trans     &trans
         //                                  ╰───────────┴──────────╯   ╰──────────┴────────────╯
+            >;
+        };
+
+        right_mouse_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &trans    &trans      &trans     &trans     &trans        &trans      &trans      &trans     &trans     &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          |   |          │          │          │          │          │
+            &trans    &trans      &trans      &trans     &trans       &mkp LCLK   &mkp RCLK &mmv MOVE_UP  &trans  &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+        &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &trans &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &kp ESC        &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
     };
