@@ -22,6 +22,8 @@
 #define TRI 4
 #define RIG_MOUSE 5
 
+
+
 / {
     behaviors {
         //ht: hold_tap {
@@ -44,6 +46,9 @@
        //     global-quick-tap;
         //    bindings = <&kp>, <&msc>;
         //};
+        &mmv {
+            time-to-max-speed-ms = <500>;
+        };
     };
 
     conditional_layers {
@@ -52,10 +57,6 @@
             if-layers = <RIG LEF>;
             then-layer = <TRI>;
         };
-    };
-
-    &mmv {
-        time-to-max-speed-ms = <500>;
     };
 
     keymap {
