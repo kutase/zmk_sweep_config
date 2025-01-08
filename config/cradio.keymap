@@ -22,7 +22,9 @@
 #define TRI 4
 #define RIG_MOUSE 5
 
-
+&mmv {
+    time-to-max-speed-ms = <500>;
+};
 
 / {
     behaviors {
@@ -46,9 +48,6 @@
        //     global-quick-tap;
         //    bindings = <&kp>, <&msc>;
         //};
-        &mmv {
-            time-to-max-speed-ms = <500>;
-        };
     };
 
     conditional_layers {
