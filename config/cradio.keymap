@@ -5,7 +5,7 @@
 
 //#define ZMK_MOUSE_DEFAULT_SCRL_VAL 1
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 2000
 
 #include <dt-bindings/zmk/mouse.h>
 
@@ -23,7 +23,7 @@
 #define RIG_MOUSE 5
 
 &mmv {
-    time-to-max-speed-ms = <500>;
+    time-to-max-speed-ms = <2000>;
 };
 
 / {
