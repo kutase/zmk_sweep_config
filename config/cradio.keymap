@@ -5,6 +5,8 @@
 
 //#define ZMK_MOUSE_DEFAULT_SCRL_VAL 1
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
+
 #include <dt-bindings/zmk/mouse.h>
 
 // Home row mods macro
@@ -50,6 +52,10 @@
             if-layers = <RIG LEF>;
             then-layer = <TRI>;
         };
+    };
+
+    &mmv {
+        time-to-max-speed-ms = <500>;
     };
 
     keymap {
